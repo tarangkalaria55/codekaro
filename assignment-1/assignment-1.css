@@ -1,0 +1,215 @@
+:root {
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+  --color-green: #1DE592;
+  --color-blue: #1B73E8;
+  --color-grey: #606468;
+  --color-light-grey: #DADCE0;
+  --font-size: 16px;
+  --font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+* {
+  font-size: var(--font-size);
+  font-family: var(--font-family);
+  box-sizing: border-box;
+  margin: unset;
+  padding: unset;
+}
+
+body {
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+a {
+  text-decoration: underline;
+  color: var(--color-black);
+  font-size: inherit;
+}
+a:visited {
+  color: var(--color-black);
+}
+
+.wrapper {
+  width: 38rem;
+  margin: 1rem auto;
+}
+
+.block {
+  width: 100% !important;
+  margin-bottom: 3rem !important;
+  border-radius: 0.8rem !important;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.block.block-1 {
+  background-color: var(--color-green);
+  aspect-ratio: 4/3;
+  padding-left: 3rem;
+  padding-top: 6rem;
+}
+.block.block-1 h1 {
+  font-size: 3rem;
+  font-weight: bolder;
+  margin-top: unset;
+  margin-bottom: unset;
+}
+.block.block-1 p {
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+.block.block-1 button {
+  width: 18rem;
+  padding: 1rem 1.5rem;
+  margin-top: 2rem;
+  border: 0px solid var(--color-white);
+  border-radius: 2rem;
+  background-color: var(--color-white);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.block.block-2 {
+  border-radius: inherit;
+  border: 1px solid var(--color-light-grey);
+}
+.block.block-2 .section {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.block.block-2 .section.section-1 {
+  padding-top: 2rem;
+}
+.block.block-2 .section.section-1 h1 {
+  margin: unset;
+  font-size: 2.5rem;
+  font-weight: bold;
+  padding-bottom: 0.5rem;
+}
+.block.block-2 .section.section-1 p {
+  color: var(--color-grey);
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+.block.block-2 .section.section-1 .img-wrapper img {
+  width: 6rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  margin: 2rem;
+}
+.block.block-2 .section.section-2 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-top: 1px solid var(--color-light-grey);
+}
+.block.block-2 .section.section-2 button {
+  border: 0px;
+  color: var(--color-blue);
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.block.block-3 {
+  border-radius: inherit;
+  border: 1px solid var(--color-light-grey);
+}
+.block.block-3 img {
+  width: 100%;
+  aspect-ratio: 2/1;
+  border-top-right-radius: inherit;
+  border-top-left-radius: inherit;
+}
+.block.block-3 .section {
+  padding: 2rem;
+}
+.block.block-3 .section .subscribe-detail {
+  color: var(--color-grey);
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+}
+.block.block-3 .section .subscribe-detail i {
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+}
+.block.block-3 .section h1 {
+  margin: unset;
+  font-size: 2rem;
+  font-weight: 600;
+  padding-bottom: 0.5rem;
+}
+.block.block-3 .section p {
+  color: var(--color-grey);
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+.block.block-3 .section button {
+  border: 1px solid var(--color-light-grey);
+  border-radius: 0.5rem;
+  padding: 1rem 1.5rem;
+  color: var(--color-blue);
+  background-color: var(--color-white);
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 1rem auto;
+}
+.block.block-4 {
+  border-radius: inherit;
+  border: 1px solid var(--color-light-grey);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem;
+}
+.block.block-4 img {
+  width: 30%;
+  margin: 1rem auto;
+}
+.block.block-4 .header {
+  margin: 1rem auto;
+}
+.block.block-4 .login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem auto;
+  width: 60%;
+}
+.block.block-4 .login-form input {
+  padding: 1rem 1.2rem;
+  border: 1px solid var(--color-light-grey);
+  border-radius: 0.5rem;
+  margin: 0.25rem auto;
+  width: 100%;
+}
+.block.block-4 .login-form input:focus {
+  transform: scale(1.05);
+}
+.block.block-4 .login-form button {
+  padding: 1rem 3rem;
+  margin: 2rem auto 1rem auto;
+  border: 0px solid var(--color-black);
+  border-radius: 2rem;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  font-size: 1rem;
+  font-weight: bold;
+}
+.block.block-4 .login-form button:hover {
+  opacity: 0.9;
+}
+.block.block-4 .forgot-password {
+  font-size: 0.9rem;
+  font-weight: normal;
+  margin-bottom: 2rem;
+}
+.block.block-4 .footer {
+  font-size: 0.8rem;
+  font-weight: normal;
+  margin-bottom: 2rem;
+}
+.block.block-4 .footer a {
+  font-size: inherit;
+}/*# sourceMappingURL=assignment-1.css.map */
