@@ -1,0 +1,306 @@
+@function get-var($var-name) {
+    @return var(--#{$var-name});
+}
+
+:root {
+    --grey: #666666;
+    --lightgrey: #C8C8C8;
+    --black: #000000;
+    --white: #FFFFFF;
+    --blue: royalblue;
+    --font-size: 16px;
+    --font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+* {
+    font-size: get-var(font-size);
+    font-family: get-var(font-family);
+    box-sizing: border-box;
+    margin: unset;
+    padding: unset;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    align-items: center;
+}
+
+.card {
+    width: 40rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+img {
+    object-fit: cover;
+}
+
+.card-1 {
+    padding: 1rem;
+    border: 1px solid get-var(lightgrey);
+    border-radius: 1rem;
+
+    .card-header {
+        width: 100%;
+        padding-bottom: 1rem;
+
+        .card-img {
+            position: relative;
+            width: 100%;
+            border-radius: 1rem;
+
+            img {
+                width: 100%;
+                object-fit: contain;
+                border-radius: 1rem;
+            }
+
+            .top-left {
+                position: absolute;
+                top: 1rem;
+                left: 1rem;
+                background: rgba(168, 168, 168, 0.821);
+                color: get-var(white);
+                padding: 0.2rem 0.4rem;
+                border-radius: 0.4rem;
+                opacity: 0.9;
+                font-weight: 400;
+            }
+
+            .bottom-left {
+                position: absolute;
+                bottom: 1rem;
+                left: 0;
+                background: get-var(blue);
+                color: get-var(white);
+                padding: 0.2rem 0.4rem;
+                font-weight: bold;
+                font-size: 1.2rem;
+            }
+
+            .bottom-right {
+                position: absolute;
+                bottom: 1rem;
+                right: 1rem;
+                background: get-var(white);
+                color: get-var(black);
+                padding: 0.2rem 0.4rem;
+                border-radius: 0.4rem;
+                opacity: 0.9;
+                font-weight: bold;
+            }
+        }
+
+        .card-title {
+            font-size: 2rem;
+            font-weight: 500;
+            margin: 1rem 0px;
+        }
+
+        .card-subtitle {
+            font-size: 1.6rem;
+            color: get-var(grey);
+        }
+    }
+
+    .card-footer {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        border-top: 1px solid get-var(grey);
+        padding-top: 1rem;
+
+        img {
+            height: 2rem;
+            flex-shrink: 1;
+        }
+
+        p {
+            font-size: 1.4rem;
+            flex-grow: 1;
+            color: get-var(grey);
+            opacity: 0.8;
+        }
+    }
+}
+
+.card-2 {
+    border-radius: 1rem;
+    height: 20rem;
+    position: relative;
+
+    img {
+        width: 100%;
+        height: 100%;
+        border-radius: calc(1rem - 1px);
+    }
+
+    .image-detail {
+        width: 100%;
+        position: absolute;
+        top: 8rem;
+        left: 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+
+        padding: 0rem 2rem;
+
+        color: get-var(white);
+
+        h1 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+
+        button {
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            background-color: get-var(white);
+            border: 0px;
+        }
+    }
+
+
+}
+
+.card-3 {
+    position: relative;
+    height: 20rem;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .image-detail {
+        width: 100%;
+        position: absolute;
+        top: 8rem;
+        left: 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+
+        padding: 0rem 2rem;
+
+        color: get-var(white);
+
+        h1 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+        }
+
+        .input-wrapper {
+            display: flex;
+            border-radius: 0.3rem;
+
+            .input-group {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                background-color: get-var(white);
+                padding: 0.2rem;
+
+                &:first-child {
+                    border-top-left-radius: 0.3rem;
+                    border-bottom-left-radius: 0.3rem;
+                }
+
+                &:last-child {
+                    border-top-right-radius: 0.3rem;
+                    border-bottom-right-radius: 0.3rem;
+                }
+
+                i {
+                    flex-shrink: 1;
+                    color: get-var(grey);
+                    padding: 2px;
+                }
+
+                >select,
+                >input {
+                    flex-grow: 1;
+                    background-color: get-var(white);
+                    border: 0px;
+                    color: get-var(grey);
+
+                    &:focus,
+                    &:focus-visible {
+                        border: 0px;
+                    }
+                }
+
+                >select {
+                    border-right: 1px solid get-var(grey);
+                }
+            }
+
+            .select-box {
+                flex-shrink: 1;
+            }
+
+            .input-box {
+                flex-grow: 1;
+            }
+        }
+    }
+}
+
+.card-4 {
+    border: 1px solid get-var(lightgrey);
+    border-radius: 1rem;
+
+    .card-header {
+
+        width: 100%;
+        position: relative;
+        margin-bottom: 5rem;
+
+        img {
+            width: 100%;
+            aspect-ratio: 3 / 1;
+            border-top-right-radius: calc(1rem - 1px);
+            border-top-left-radius: calc(1rem - 1px);
+        }
+
+        .profile-img {
+            position: absolute;
+            bottom: -5rem;
+            left: calc(50% - 5rem);
+            width: 10rem;
+            height: 10rem;
+            border-radius: 50%;
+            border: 0.2rem solid get-var(white);
+        }
+    }
+
+    .card-body {
+        padding: 2rem 3rem 3rem 3rem;
+    }
+
+    .card-title {
+        font-size: 2rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+    }
+
+    .card-subtitle {
+        margin-bottom: 1rem;
+        font-size: 1.6rem;
+        color: get-var(grey);
+    }
+}

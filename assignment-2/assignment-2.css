@@ -1,0 +1,295 @@
+:root {
+  --grey: #666;
+  --lightgrey: #c8c8c8;
+  --black: #000;
+  --white: #fff;
+  --blue: royalblue;
+  --font-size: 16px;
+  --font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+* {
+  font-size: var(--font-size);
+  font-family: var(--font-family);
+  box-sizing: border-box;
+  margin: unset;
+  padding: unset;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  align-items: center;
+}
+
+.card {
+  width: 40rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+img {
+  object-fit: cover;
+}
+
+.card-1 {
+  padding: 1rem;
+  border: 1px solid var(--lightgrey);
+  border-radius: 1rem;
+}
+
+.card-1 .card-header {
+  width: 100%;
+  padding-bottom: 1rem;
+}
+
+.card-1 .card-header .card-img {
+  position: relative;
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.card-1 .card-header .card-img img {
+  width: 100%;
+  object-fit: contain;
+  border-radius: 1rem;
+}
+
+.card-1 .card-header .card-img .top-left {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: rgba(168, 168, 168, 0.821);
+  color: var(--white);
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.4rem;
+  opacity: 0.9;
+  font-weight: 400;
+}
+
+.card-1 .card-header .card-img .bottom-left {
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  background: var(--blue);
+  color: var(--white);
+  padding: 0.2rem 0.4rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.card-1 .card-header .card-img .bottom-right {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background: var(--white);
+  color: var(--black);
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.4rem;
+  opacity: 0.9;
+  font-weight: bold;
+}
+
+.card-1 .card-header .card-title {
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 1rem 0px;
+}
+
+.card-1 .card-header .card-subtitle {
+  font-size: 1.6rem;
+  color: var(--grey);
+}
+
+.card-1 .card-footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-top: 1px solid var(--grey);
+  padding-top: 1rem;
+}
+
+.card-1 .card-footer img {
+  height: 2rem;
+  flex-shrink: 1;
+}
+
+.card-1 .card-footer p {
+  font-size: 1.4rem;
+  flex-grow: 1;
+  color: var(--grey);
+  opacity: 0.8;
+}
+
+.card-2 {
+  border-radius: 1rem;
+  height: 20rem;
+  position: relative;
+}
+
+.card-2 img {
+  width: 100%;
+  height: 100%;
+  border-radius: calc(1rem - 1px);
+}
+
+.card-2 .image-detail {
+  width: 100%;
+  position: absolute;
+  top: 8rem;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0rem 2rem;
+  color: var(--white);
+}
+
+.card-2 .image-detail h1 {
+  font-size: 1.5rem;
+}
+
+.card-2 .image-detail p {
+  font-size: 1rem;
+}
+
+.card-2 .image-detail button {
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  background-color: var(--white);
+  border: 0px;
+}
+
+.card-3 {
+  position: relative;
+  height: 20rem;
+}
+
+.card-3 img {
+  width: 100%;
+  height: 100%;
+}
+
+.card-3 .image-detail {
+  width: 100%;
+  position: absolute;
+  top: 8rem;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0rem 2rem;
+  color: var(--white);
+}
+
+.card-3 .image-detail h1 {
+  font-size: 1.5rem;
+}
+
+.card-3 .image-detail p {
+  font-size: 1.2rem;
+}
+
+.card-3 .image-detail .input-wrapper {
+  display: flex;
+  border-radius: 0.3rem;
+}
+
+.card-3 .image-detail .input-wrapper .input-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: var(--white);
+  padding: 0.2rem;
+}
+
+.card-3 .image-detail .input-wrapper .input-group:first-child {
+  border-top-left-radius: 0.3rem;
+  border-bottom-left-radius: 0.3rem;
+}
+
+.card-3 .image-detail .input-wrapper .input-group:last-child {
+  border-top-right-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
+}
+
+.card-3 .image-detail .input-wrapper .input-group i {
+  flex-shrink: 1;
+  color: var(--grey);
+  padding: 2px;
+}
+
+.card-3 .image-detail .input-wrapper .input-group>select,
+.card-3 .image-detail .input-wrapper .input-group>input {
+  flex-grow: 1;
+  background-color: var(--white);
+  border: 0px;
+  color: var(--grey);
+}
+
+.card-3 .image-detail .input-wrapper .input-group>select:focus,
+.card-3 .image-detail .input-wrapper .input-group>input:focus,
+.card-3 .image-detail .input-wrapper .input-group>select:focus-visible,
+.card-3 .image-detail .input-wrapper .input-group>input:focus-visible {
+  border: 0px;
+}
+
+.card-3 .image-detail .input-wrapper .input-group>select {
+  border-right: 1px solid var(--grey);
+}
+
+.card-3 .image-detail .input-wrapper .select-box {
+  flex-shrink: 1;
+}
+
+.card-3 .image-detail .input-wrapper .input-box {
+  flex-grow: 1;
+}
+
+.card-4 {
+  border: 1px solid var(--lightgrey);
+  border-radius: 1rem;
+}
+
+.card-4 .card-header {
+  width: 100%;
+  position: relative;
+  margin-bottom: 5rem;
+}
+
+.card-4 .card-header img {
+  width: 100%;
+  aspect-ratio: 3;
+  border-top-right-radius: calc(1rem - 1px);
+  border-top-left-radius: calc(1rem - 1px);
+}
+
+.card-4 .card-header .profile-img {
+  position: absolute;
+  bottom: -5rem;
+  left: calc(50% - 5rem);
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  border: 0.2rem solid var(--white);
+}
+
+.card-4 .card-body {
+  padding: 2rem 3rem 3rem 3rem;
+}
+
+.card-4 .card-title {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.card-4 .card-subtitle {
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  color: var(--grey);
+}
