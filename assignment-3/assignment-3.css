@@ -1,0 +1,319 @@
+:root {
+  --white: white;
+  --black: #222222;
+  --grey: grey;
+  --lightgrey: lightgrey;
+  --darkgrey: #717171;
+  --pink: #FF385C;
+  --font-size: 16px;
+  --font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+* {
+  font-size: var(--font-size);
+  font-family: var(--font-family);
+  box-sizing: border-box;
+  margin: unset;
+  padding: unset;
+}
+
+body {
+  margin: auto 5rem;
+  position: relative;
+}
+
+img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+svg {
+  display: block;
+  height: 100%;
+  width: 100%;
+  fill: currentcolor;
+}
+
+.h-line {
+  height: 0;
+  width: 100%;
+  border-top: 0.5px solid var(--lightgrey);
+}
+
+.v-line {
+  height: 100%;
+  width: 0;
+  border-left: 0.5px solid var(--lightgrey);
+}
+
+.border-radius {
+  border: 1px solid var(--lightgrey);
+  border-radius: 1rem;
+}
+
+.main-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  opacity: 1;
+  background: var(--white);
+}
+
+.header {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .logo {
+  color: var(--pink);
+  width: 102px;
+  height: 32px;
+}
+.header .header-circular-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 3rem;
+  border-radius: 3rem;
+  border: 1px solid var(--lightgrey);
+  padding: 0.5rem 1rem;
+}
+.header .center-header-item .v-line {
+  margin: auto 1rem;
+}
+.header .center-header-item .search-icon {
+  margin-left: 1rem;
+  background: var(--pink);
+  color: var(--white);
+  height: 2rem;
+  width: 2rem;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header .right-header-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  height: inherit;
+}
+.header .right-header-item .link-1 {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+.header .right-header-item .profile {
+  gap: 1rem;
+  color: var(--grey);
+}
+.header .right-header-item .profile .profile-icon {
+  height: 100%;
+}
+
+.nav-menu {
+  margin: 1rem auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.nav-menu .categories {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  height: 100%;
+  flex-grow: 1;
+  flex-wrap: nowrap;
+  padding-top: 0.5rem;
+}
+.nav-menu .categories .category-icon {
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 0.2rem;
+  opacity: 0.5;
+}
+.nav-menu .categories .category-icon .category-title {
+  font-size: small;
+  font-weight: 600;
+}
+.nav-menu .categories .category-icon .category-img {
+  height: 2rem;
+  width: 2rem;
+}
+.nav-menu .categories .category-icon.active {
+  opacity: 1;
+  border-bottom: 2px solid var(--black);
+}
+.nav-menu .filter {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  height: 100%;
+  padding: 1rem;
+}
+.nav-menu .filter * {
+  font-size: small;
+  font-weight: 600;
+}
+.nav-menu .tax-switch {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  height: 100%;
+  padding: 1rem;
+}
+.nav-menu .tax-switch * {
+  font-size: small;
+  font-weight: 600;
+}
+
+.arrow-icon {
+  border-radius: 100%;
+  border: 1px solid var(--grey);
+  height: 2rem;
+  width: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.arrow-icon svg {
+  height: 12px;
+  width: 12px;
+}
+
+.main {
+  width: calc(100vw - 10rem);
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+  z-index: 1;
+}
+.main .card {
+  width: calc((100vw - 10rem - 4rem - 2px) / 4);
+  border: 0 !important;
+}
+.main .card .card-header-image {
+  border: 0 !important;
+  position: relative;
+}
+.main .card .card-header-image img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  border: 0 !important;
+}
+.main .card .card-header-image .favourite {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: var(--white);
+  padding: 0.2rem 0.5rem;
+  border-radius: 2rem;
+  font-weight: 500;
+}
+.main .card .card-header-image .heart-icon {
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  top: 1rem;
+  right: 1rem;
+  color: #222222;
+}
+.main .card .card-header-image .heart-icon svg {
+  color: #222222;
+}
+.main .card .card-header-image .arrow-icon {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-100%);
+  background: var(--white);
+}
+.main .card .card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+.main .card .card-header .cart-title {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.main .card .card-header .rating-waraper {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+.main .card .card-header .rating-waraper .star-icon {
+  height: 12px;
+  width: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main .card .card-header .rating-waraper .star-icon svg {
+  height: 12px;
+  width: 12px;
+}
+.main .card .card-header .rating-waraper .rating {
+  font-size: 1rem;
+  font-weight: 400;
+}
+.main .card .light-grey-text {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--grey);
+}
+.main .card .price {
+  margin-top: 0.5rem;
+}
+.main .card .underline {
+  border-bottom: 1px solid var(--black);
+}
+.main .card .bold {
+  font-weight: 600;
+}
+
+.dot-wrapper {
+  display: flex;
+  gap: 0.2rem;
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dot {
+  width: 0.4rem;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  background: var(--white);
+  opacity: 0.4;
+}
+.dot.active {
+  opacity: 1;
+}
+
+.floating-button {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--black);
+  color: var(--white);
+  border-radius: 2rem;
+  border: 0;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}/*# sourceMappingURL=assignment-3.css.map */
