@@ -165,9 +165,12 @@ svg {
   align-items: center;
   gap: 0.5rem;
   height: 100%;
-  padding: 1rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
-.nav-menu .tax-switch * {
+.nav-menu .tax-switch .tax-text {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   font-size: small;
   font-weight: 600;
 }
@@ -198,6 +201,7 @@ svg {
 .main .card {
   width: calc((100vw - 10rem - 4rem - 2px) / 4);
   border: 0 !important;
+  padding-bottom: 1rem;
 }
 .main .card .card-header-image {
   border: 0 !important;
@@ -316,4 +320,25 @@ svg {
   padding: 0.5rem 1rem;
   font-size: 1.2rem;
   font-weight: 600;
+}
+
+.switch {
+  height: 22px;
+  width: 33px;
+  background: var(--black);
+  margin-top: -1rem;
+  margin-bottom: -1rem;
+  border-radius: 1rem;
+  border: 1px solid var(--black);
+  display: flex;
+  justify-content: flex-start;
+}
+.switch.checked {
+  justify-content: flex-end;
+}
+.switch .circle {
+  height: 100%;
+  aspect-ratio: 1/1;
+  background: var(--white);
+  border-radius: 1rem;
 }/*# sourceMappingURL=assignment-3.css.map */
